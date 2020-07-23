@@ -14,13 +14,15 @@ import org.firstinspires.ftc.robotcore.internal.system.AppUtil;
 import java.io.File;
 
 /**
- * Created by Sarthak on 6/1/2019.
  * Odometry system calibration. Run this OpMode to generate the necessary constants to calculate the robot's global position on the field.
  * The Global Positioning Algorithm will not function and will throw an error if this program is not run first
  */
+
+//run this file for calibration first
+
 @TeleOp(name = "Odometry System Calibration", group = "Calibration")
 
-//Calibration file that stores necessary data for the odometry wheels
+//stores necessary data for the odometry wheels
 
 public class OdometryCalibration extends LinearOpMode {
     //Drive motors
@@ -179,7 +181,6 @@ public class OdometryCalibration extends LinearOpMode {
 
         telemetry.addData("Status", "Hardware Map Init Complete");
         telemetry.update();
-
     }
 
     /**
@@ -192,16 +193,17 @@ public class OdometryCalibration extends LinearOpMode {
 
     /**
      * Sets power to all four drive motors
-     * @param rf power for right front motor
-     * @param rb power for right back motor
-     * @param lf power for left front motor
-     * @param lb power for left back motor
+     * @param fr power for right front motor
+     * @param br power for right back motor
+     * @param fl power for left front motor
+     * @param bl power for left back motor
      */
-    private void setPowerAll(double rf, double rb, double lf, double lb){
-        right_front.setPower(rf);
-        right_back.setPower(rb);
-        left_front.setPower(lf);
-        left_back.setPower(lb);
+
+    private void setPowerAll(double fr, double br, double fl, double bl){
+        right_front.setPower(fr);
+        right_back.setPower(br);
+        left_front.setPower(fl);
+        left_back.setPower(bl);
     }
 
 }
